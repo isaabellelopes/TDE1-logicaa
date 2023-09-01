@@ -1,0 +1,14 @@
+Isabelle L, Barbara B, Guilherme Voss
+4
+U
+3,5,J,7
+1,8,6,10
+C
+3,4,H,I,K,B,R
+1,B,3,O,D,I
+I
+1,2,9,7,5
+4,5,9
+D
+I,O,8,11
+A,K,D,3
