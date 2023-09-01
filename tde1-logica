@@ -1,0 +1,55 @@
+with open('mensagem.txt', 'r') as file:
+  lines = file.readlines()
+
+for i in range(2, len(lines) - 2, 3):
+  operation = lines[i].strip().split(',')
+  print(f"Operation: {operation}")
+
+  if operation[0] == 'U':
+    set1_str = lines[i + 1].replace('\n', '')
+    set2_str = lines[i + 2].replace('\n', '')
+
+    set1 = set(map(str, set1_str.split(',')))
+    set2 = set(map(str, set2_str.split(',')))
+
+    result = set1.union(set2)
+    print(f"Conjunto 1: {set1}, Conjunto 2: {set2}. Resultado: {result}")
+    print("")
+
+  elif operation[0] == 'I':
+    set1_str = lines[i + 1].replace('\n', '')
+    set2_str = lines[i + 2].replace('\n', '')
+
+    set1 = set(map(str, set1_str.split(',')))
+    set2 = set(map(str, set2_str.split(',')))
+
+    result = set1.intersection(set2)
+    print(f"Conjunto 1: {set1}, Conjunto 2: {set2}. Resultado: {result}")
+    print("")
+
+  elif operation[0] == 'D':
+    set1_str = lines[i + 1].replace('\n', '')
+    set2_str = lines[i + 2].replace('\n', '')
+
+    set1 = set(map(str, set1_str.split(',')))
+    set2 = set(map(str, set2_str.split(',')))
+
+    result = set1.difference(set2)
+    print(f"Conjunto 1: {set1}, Conjunto 2: {set2}. Resultado: {result}")
+    print("")
+
+  elif operation[0] == 'C':
+    plane = []
+    set1_str = lines[i + 1].replace('\n', '')
+    set2_str = lines[i + 2].replace('\n', '')
+
+    set1 = set(map(str, set1_str.split(',')))
+    set2 = set(map(str, set2_str.split(',')))
+
+    for pl1 in set1:
+      for pl2 in set2:
+        teste = [pl1, pl2]
+        plane.append(teste)
+
+    print(f"Conjunto 1: {set1}, Conjunto 2: {set2}. Resultado: {plane}")
+    print("")
